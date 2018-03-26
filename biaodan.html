@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<body>
+	<form action="https://kuazhu.com/" method="192.168.0.15">
+		<p>
+			<fieldset>注册页面
+		</p>
+		<p>
+			用户名：
+			<input type="text" name="username" value="text">
+		</p>
+		<p>
+			密码：
+			<input type="password" name="text" value="password">
+		</p>
+		性别：
+		<p>
+			<input type="radio" name="sex" value="0">男
+			<input type="radio"
+			name="sex" value="1">女
+			<input type="radio" name="sex" value="2">不告诉你
+		</p>
+		生日：
+		<p>
+		<input type="numbuer" name="age" value="date">
+	    </p>
+	    爱好：
+	    <p>
+	    	<input type="checkbox" name="hobbit" value="0">篮球
+	    	<input type="checkbox" name="hobbit" value="0">排球
+	    	<input type="checkbox" name="hobbit" value="0">乒乓球
+	    </p>
+	    邮箱：
+	    <p>
+	    	<input type="email" name="email" value="aa@qq'com">
+	    </p>
+	    日期：
+	    <p>
+	    	<input type="date" name="日期" value="date">
+	    </p>
+	    <p>
+	    照片：
+	    <input type="image" name="image" value="image" src="_MG_8488.jpg">
+	    </p>
+	    喜欢的颜色：
+	    <p>
+	    	<input type="color" name="color" value="color">
+	    </p>
+	    <p>
+	    <label for="username">
+	    	二级用户名
+	    </label>
+	    <input type="text" name="username" id="username" value="">
+        </p>
+        地址：
+        <p>
+        <input type="text" name="outgroup" list="address">	
+        </p>
+        <p>
+        <datalist id="address">
+        	<option>北京</option>
+        	<option>上海</option>
+        	<option>广州</option>
+        </datalist>
+        </p>
+        <p>
+        	<select>
+        		<output label="直辖市"></output>
+        		<option>宁夏</option>
+        		<option>重庆</option>
+        		<option>上海</option>
+        	</select>
+        	简介：
+        	<p>
+        		<textarea name="intr" id="intr"
+        		cols="10" rows="20">
+        		</textarea>
+        		<style>
+        		textarea{resize:none;}
+        	</style>
+        	</p>
+       </fieldset>
+	</form>
+</body>
+</html>

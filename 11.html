@@ -5,14 +5,17 @@
 	<title>homework</title>
 </head>
 <body>
-	<form action="https://kuazhu.com/">
+	<form action="https://kuazhu.com/" method="192.168.0.15">
+			<p>
+				<fieldset>
+				<legend>注册界面</legend>
+			</p>   
 		<p>
 		用户名：
-		<input type="text" name="sex" value="text">
-	    </p>
+		<input type="text" name="username" value="text">
 	    <p>
 		密码：
-		<input type="password" name="text" value="text">
+		<input type="password" name="text" value="password">
 		</p>
 		<p>
 		性别：
@@ -32,17 +35,23 @@
 		<input type="checkbox" name="hobbit" value="2">羽毛球
 		</p>
 		<p>
-			<input type="button" name="button" value="登录">
-			<input type="submit" name="submit" value="注册">
-			<input type="reset" name="reset" value="清空">
+			<input type="button" name="button" id="username" value="登录">
+			<input type="submit" name="submit" id="username" value="注册">
+			<input type="reset" name="reset" id="username" value="清空">
 		</p>
 		邮箱:
 		<input type="email" name="email" value="aa@qq.com">
-		照片:
+		<p>
+			<p>
+				日期：
+				<input type="date" name="日期" value="date">
+			</p>
+			照片:
 		<input type="image" name="image" value="照片" src="_MG_8488.jpg">
+	    </p>
 		<p>
 			喜欢的颜色:
-		<input type="color" name="color" >
+		<input type="color" name="color" value="color">
 		</p>
 		<p>
 		<label for="username">二级用户名</label>
@@ -52,12 +61,12 @@
         	地址:
         	<input type="text" name="optgroup" list="address">
         	<datalist id="address">
-        	<option>北京</option>
-        	<option>上海</option>
-        	<option>广州</option>
-        	<option>香港</option>
-        	<option>澳门</option>
-        	<option>深圳</option>
+        	<option value="bj">北京</option>
+        	<option value="sh">上海</option>
+        	<option value="gz">广州</option>
+        	<option value="xg">香港</option>
+        	<option value="am">澳门</option>
+        	<option value="sz">深圳</option>
         	</datalist>
 
         </p>
@@ -67,8 +76,18 @@
         			<option value="0">天津</option>
         			<option value="1">宁夏</option>
         			<option value="2">上海</option>
+        		</optgroup>
         	</select>
         </p>
+        <p>
+        	简介：<textarea name="intr"
+        	id="intr" cols="20" rows="10">
+        	</textarea>
+        	<style>
+        		textarea{resize: none;}
+        	</style>
+        </p>
+         </fieldset>
 	</form>
 </body>
 </html>
