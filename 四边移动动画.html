@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>四边移动动画</title>
+	<style type="text/css">
+		*{margin: 0;
+			padding:0;
+		     }
+	    .box1{width: 600px;
+	    	height: 500px;
+	    	background-color: pink;
+	         position: relative;
+	         }
+	    .box2{width: 100px;
+	        height: 100px;
+	        background-color: yellow;
+	        position: absolute;
+	        animation: sport 3s;}
+	        @keyframes sport{
+	        	0%{top:0;
+	        	    left: 0;}
+	        	 25%{top:0;
+	        	    left: 500px;}
+	        	  50%{top:400px;
+	        	     left: 500px;} 
+	        	   75%{top:400px;
+	        	      left: 0px;}
+	        	    100%{top:0px;
+	        	       left: 0px;}        
+	        }  			
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<div class="box2"></div>
+	</div>
+</body>
+</html>

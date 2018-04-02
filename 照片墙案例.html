@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>照片墙案例</title>
+	<style type="text/css">
+		*{margin: 0;
+		   padding: 0;}
+		 ul{height: 200px;
+		    width: 800px;
+		    border: 1px solid;} 
+		  ul li {
+		  	display: inline-block;
+		     margin:20px auto;
+		     margin-left: 75px;
+		     transform: rotate(45deg);
+		     }
+		  ul li img{width: 100px;
+		  	height: 150px;
+		     } 
+		   ul:hover li{opacity: 0.5;
+		     } 
+		   ul li:hover{opacity: 1;
+		   	transform: rotate(0deg) scale(2,1.5);
+		    transition-duration: 1s;}   
+	</style>
+</head>
+<body>
+	<ul>
+		<li><img src="ad1.jpg" alt=""></li>
+		<li><img src="ad2.jpg" alt=""></li>
+		<li><img src="ad3.jpg" alt=""></li>
+		<li><img src="ad4.jpg" alt=""></li>
+	</ul>
+</body>
+</html>
