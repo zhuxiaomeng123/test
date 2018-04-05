@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义字体</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		@font-face{
+			font-family: "testfont";
+			src:url(Sansation_Light.eot) ,url(Sansation_Light.ttf);
+		}
+         @font-face{
+         	font-family: "testfont"
+         	src:url(Sansation_Bold.eot), url(Sansation_Bold.ttf);
+         	font-weight: bold;
+     }
+		div{
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+			border: 1px solid;
+			font-family: "testfont"
+			/*font-weight: bold;
+*/		}
+	</style>
+</head>
+<body>
+	<div>nihao   你好</div>
+</body>
+</html>
