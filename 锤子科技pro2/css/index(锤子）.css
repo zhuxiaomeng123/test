@@ -1,0 +1,65 @@
+
+.top{
+	background: #48111c;
+	width: 100%;
+	height: 101px;
+}
+.top .container .nav .logo a img{
+	width: 45px;
+	height: 45px;
+	top:0;
+	left: 0;
+}
+.top .container .nav ul {
+	list-style: none;
+	font-size: 18px;		
+	line-height: 18px; 
+    background-color: red;
+    width: 800px;
+    height: 100px;
+    margin: 0 auto;
+   
+}
+.top .container .nav ul li{
+	float: left;
+}
+.header{
+	background: #4f1620;
+	width: 100%;
+	height: 37px;
+}
+.hot{
+	background: #732e3e;
+	width: 100%;
+	height: 763px;
+}
+.box1{
+	background: # 030207;
+	width: 100%;
+	height: 763px;
+}
+.box2{
+	background: #050409;
+	width: 100%;
+	height: 763px;
+}
+.box3{
+	background: #212025;
+	width: 100%;
+	height: 763px;
+}
+.main{
+	background: #d7dce0;
+	width: 100%;
+	height: 764px;
+}
+.footer{
+	background: #fafafa;
+	width: 100%;
+	height: 232px;
+}
+.end{
+	background: #e3fafa;
+	width: 100%;
+	height: 120px;
+}

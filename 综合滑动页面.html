@@ -14,7 +14,9 @@
 			     
 		         height: 100%;
 		     }
-		     body{overflow: hidden;}
+		     body{
+		     	overflow: hidden;
+		         }
 		.container{
 			height: 100%;
 		}
@@ -29,7 +31,7 @@
           .container a{
           	background-color: #2f2f2f;
           }
-       #ctr1, #ctr1+a{
+        #ctr1, #ctr1+a{
         	left: 0%;
         }
         #ctr2, #ctr2+a{
@@ -55,7 +57,7 @@
         	text-decoration: none;        	
         	font-size: 18px;
         	color: white;
-             font-weight: bold;   
+            font-weight: bold;   
         }
         .container input:checked+a,
         .container input:checked:hover+a{        	
@@ -110,9 +112,7 @@
         	
         }
       #contact{
-        	background-image: url(images/bg5.jpg);
-        	;
-        	
+        	background-image: url(images/bg5.jpg);     	
         }
         #ctr1:checked ~ .content #home,
         #ctr2:checked ~ .content #service,
@@ -133,15 +133,15 @@
 </head>
 <body>
 	<div class="container">
-	<input type="radio" name="mrx" id="ctr1" checked="chcked">
+	<input type="radio" name="mrx" id="ctr1" checked="checked">
 	<a href="#"><i class="fas fa-home"></i>home</a>
-	<input type="radio" name="mrx" id="ctr2" checked="chcked">
+	<input type="radio" name="mrx" id="ctr2" checked="checked">
 	<a href="#"><i class="fas fa-coffee"></i>service</a>
-	<input type="radio" name="mrx" id="ctr3" checked="chcked">
+	<input type="radio" name="mrx" id="ctr3" checked="checked">
 	<a href="#"><i class="fas fa-building"></i>about</a>
-	<input type="radio" name="mrx" id="ctr4" checked="chcked">
+	<input type="radio" name="mrx" id="ctr4" checked="checked">
 	<a href="#"><i class="fas fa-users"></i>team</a>
-	<input type="radio" name="mrx" id="ctr5" checked="chcked">
+	<input type="radio" name="mrx" id="ctr5" checked="checked">
 	<a href="#"><i class="fas fa-phone"></i>contact</a>
            <div class="content">
                   <section class="panel" id="home">home</section>
