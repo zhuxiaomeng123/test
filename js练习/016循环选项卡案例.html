@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>循环选项卡案例</title>
+	<style type="text/css">
+	div{
+		width: 100px;
+		height: 100px;
+		border: 1px solid #ccc;
+		background-color: red;
+		display: none;
+	}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oBtn=document.getElementsByTagName('input');
+			var oDiv=document.getElementsByTagName('div');
+			// console.log(oBtn);
+			// console.log(oBtn);
+		             for(var i=0;i<oBtn.length;i++){
+
+			  	     oBtn[i].index=i;/*存值*/
+
+				oBtn[i].onclick=function(){
+                  // console.log(this) 
+
+                              for (var j = 0; j< oBtn.length; j++) {
+
+                  	            oBtn[j].className='';
+                  	            oDiv[j].style.display='none';
+                                                                   }
+
+                       this.className='active';
+                    oDiv[this.index].style.display='block';/*存下来供它使用*/
+				                           }
+			                                         }
+		                           }
+	</script>
+</head>
+<body>
+	<input type="button" value="选项一" class="active" style="background-color: yellow;">
+	<input type="button" value="选项二">
+	<input type="button" value="选项三">
+	<div style="display: block;">1</div>
+	<div>2</div>
+	<div>3</div>
+</body>
+</html>

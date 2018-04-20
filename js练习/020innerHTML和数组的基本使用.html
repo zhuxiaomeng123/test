@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML和数组的基本使用</title>
+	<style type="text/css">
+		#box{
+			width: 500px;
+			height: 500px;
+			border: 1px solid #000;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oTxt=document.getElementById('txt');
+			var oBtn=document.getElementById('btn');
+			var oBox=document.getElementById('box');
+
+			oBtn.onclick=function(){
+				// alert(oTxt.value)
+				oBox.innerHTML=oTxt.value
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn">
+	<div id="box"></div>
+</body>
+</html>

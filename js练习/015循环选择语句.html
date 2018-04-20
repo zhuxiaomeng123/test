@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>循环选择语句</title>
+	<script type="text/javascript">
+		window.onload=function(){
+		var oBtn1=document.getElementById('btn1');
+		var oBtn2=document.getElementById('btn2');
+		var oBtn3=document.getElementById('btn3');
+		var oDiv=document.getElementById('box');
+
+		var aCb=oDiv.getElementsByTagName('input');
+                 console.log(aCb);
+		       oBtn1.onclick=function(){
+		       for (var i = 0; i < aCb.length; i++) {
+		       	   aCb[i].checked=true;
+		       }
+		    }
+		       oBtn2.onclick=function(){
+		       	for (var i = 0; i < aCb.length; i++) {
+		       		aCb[i].checked=false;
+		       	}
+		     }
+		       oBtn3.onclick=function(){
+		       	for (var i = 0; i < aCb.length; i++) {
+		       		if (aCb[i].checked==true) {
+		       			aCb[i].checked=false;
+		       		}
+		       		else{
+		       			aCb[i].checked=true;
+		       		}
+               }
+           }
+       }
+	</script>
+</head>
+<body>
+	<input type="button" id="btn1" value="全选">
+	<input type="button" id="btn2" value="全不选">
+	<input type="button" id="btn3" value="反选">
+	<div id="box">
+	       <input type="checkbox"><br>
+	       <input type="checkbox"><br>
+	       <input type="checkbox"><br>
+	       <input type="checkbox"><br>
+	       <input type="checkbox"><br>
+	       <input type="checkbox"><br>
+	       <input type="checkbox"><br>
+	</div>
+</body>
+</html>

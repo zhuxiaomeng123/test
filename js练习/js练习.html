@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js移入移除</title>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background:#ccc;
+			display: none;
+		}		
+	</style>
+</head>
+<body>
+	<!-- <div type="checkbox" onclick="this.style.background='red'">点我</div> -->
+	
+	<!-- <input type="checkbox" onmouseover="box.style.display='block'"
+	onmouseout="box.style.display='none'"> -->
+
+	<input type="checkbox" onmouseover="document.getElementById('box').style.display='block';" 
+	onmouseout="document.getElementById('box').style.display='none';">
+	<div id="box">请注意前方...........</div>
+</body>
+</html>
