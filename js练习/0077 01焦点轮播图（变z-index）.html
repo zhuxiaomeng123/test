@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS轮播图练习</title>
+<!-- <link rel="stylesheet" type="text/css" href="css/index(mi).css"> -->
+<style type="text/css">
+	*{
+	margin: 0;
+	padding: 0;
+}
+ .carousel{
+	width: 1226px;
+	height: 460px;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+ .carousel .img-box li{
+ 	list-style: none;
+	width: 1226px;
+	height: 430px;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+ .carousel .img-box li img{
+	width: 100%;
+	height: 100%;
+}
+.leftarrow,.rightarrow{
+    display: inline-block;
+    width: 30px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    top:200px;
+    cursor:pointer;
+    z-index: 999;
+}
+.leftarrow:hover,.rightarrow:hover{
+          background: rgba(0,0,0,0.3);
+}
+.leftarrow{
+	left: 0px;
+}
+.rightarrow{
+	right: 0px;
+}
+ .carousel .btn-box {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	z-index: 999;
+}
+.carousel .btn-box li{
+	list-style: none;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	cursor: pointer;	
+}
+.carousel .active{
+	background: red;
+}
+</style>
+<script src="js/tool.js"></script>
+<script type="text/javascript">
+   window.onload=function(){
+	var aImgLi=document.getElementById('imgBox').children;
+	var aBtnLi=document.getElementById('btnBox').children;
+	var oPreBtn=document.getElementById('preBtn');
+	var oNextBtn=document.getElementById('nextBtn');
+	var oBox=document.getElementById('carouselBox');
+         var now =0;
+         var timer=null;
+	oNextBtn.onclick=function(){
+		
+		now++;
+		if(now>=aBtnLi.length){
+			now=0;
+		}
+		tab();
+	}
+	oPreBtn.onclick=function(){
+		
+		now--;
+		if(now<0){
+			now=aBtnLi.length-1;
+		}
+		tab();
+	}
+	function tab(){
+		for(var i = 0;i<aBtnLi.length;i++){
+			aImgLi[i].style.zIndex=0;
+			aImgLi[i].style.opacity=0;
+			aBtnLi[i].className='';
+		}
+		aImgLi[now].style.zIndex=30;
+		animation(aImgLi[now],{'opacity':100},false);
+		aImgLi[now].className='active';
+	}
+	for (var i = 0; i < aBtnLi.length; i++) {
+		aBtnLi[i].index=i;
+		aBtnLi[i].onclick=function(){
+			now=this.index;
+			tab();
+		}
+	}
+	timer=setInterval(function(){
+		oNextBtn.onclick();
+	},2000)
+	oBox.onmouseover=function(){
+		clearInterval(timer);
+	}
+	oBox.onmouseout=function(){
+		timer=setInterval(function(){
+		oNextBtn.onclick();
+	},2000)
+  }
+}
+</script>
+</head>
+<body>
+ <div class="carousel" id="carouselBox">
+	  <ul class="img-box" id="imgBox">
+	    <li style="z-index: 30"><img src="images/hot1.jpg" alt=""></li>
+	    <li><img src="images/hot2.jpg" alt=""></li>
+	    <li><img src="images/hot3.jpg" alt=""></li>
+	    <li><img src="images/hot4.jpg" alt=""></li>
+	    <li><img src="images/hot5.jpg" alt=""></li>
+	  </ul>
+	  <span class="leftarrow" id="preBtn">&lt</span>
+	  <span class="rightarrow" id="nextBtn">&gt</span>
+	     <ul class="btn-box" id="btnBox">
+	     	<li class="active"></li>
+	     	<li></li>
+	     	<li></li>
+	     	<li></li>
+	     	<li></li>
+	   </ul>
+</div>
+</body>
+</html>

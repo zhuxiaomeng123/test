@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画函数运用-图标跳动</title>
+		<link rel="stylesheet" type="text/css" href="../css/fontawesome-all.css">
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				width: 800px;
+				height: 200px;
+				margin: 100px auto;
+			}
+			li{
+				list-style: none;
+				width: 100px;
+				height: 100px;
+				border: 1px solid #000;
+				float: left;
+				text-align: center;
+				position: relative;
+				
+			}
+			i{
+                 font-size: 30px;
+                 position: absolute;
+                 top:20px;
+                 left: 25px;
+			}
+			p{
+				position: absolute;
+				left: 25px;
+				bottom: 10px;
+			}
+		</style>
+		<script src="js/tool.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var aLi=document.getElementsByTagName('li');
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].onmouseover=function(){
+						var oI = this.firstElementChild;
+						animation(oI,{top:0,opacity:0},false,function(){
+							oI.style.opacity=0;
+							animation(oI,{top:20,opacity:100},false);
+						});
+					}
+				}
+			}
+		</script>
+</head>
+<body>
+	<ul>
+		<li>
+			<i class="fas fa-home"></i>
+			<p>家庭</p>
+		</li>
+		<li>
+			<i class="fas fa-coffee"></i>
+			<p>休息</p>
+		</li>
+		<li>
+			<i class="fas fa-building"></i>
+			<p>办公</p>
+		</li>
+		<li>
+			<i class="fas fa-users"></i>
+			<p>我们</p>
+		</li>
+	</ul>
+</body>
+</html>

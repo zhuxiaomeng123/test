@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件-默认行为和右键菜单</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#menu{
+			width: 100px;
+			height: 300px;
+			background: #ccc;
+			display: none;
+			position: absolute;
+			
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oMenu=document.getElementById('menu');
+			document.oncontextmenu=function(ev){
+				var oEvent=ev||event;
+				// alert(1);
+				oMenu.style.display='block';
+				oMenu.style.left=oEvent.clientX+'px';
+				oMenu.style.top=oEvent.clientY+'px';
+				return false;
+				//oEvent.preventDefault();
+				// return和.preventDefault都可以去除系统默认行为
+			}
+			document.onclick=function(){
+                         oMenu.style.display='none';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="menu">aaa</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>长宽透明往返动画</title>
+<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background: red;
+			float: left;
+			margin-right: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+                /*默认的是减速动画,默认是false*/
+		       function animation(obj,attr,iTarget,isLinear,fnEnd){
+		    		clearInterval(obj.timer);
+		    		var iSpeed=0;
+		    		// isLinear=isLinear||true;
+		    		obj.timer=setInterval(function(){
+		    			var curr=parseFloat(getComputedStyle(obj,false)[attr]); 
+		    			var isStop=false;
+		    			if(attr=='opacity'){
+		    				curr=Math.round(curr*100);  
+		    			} 
+		    			
+		    			if(isLinear){
+		    					     if(curr>iTarget){
+          			                 iSpeed=-20;
+          		                  }else{
+          			                iSpeed=20;
+          		                 }
+                        	if(Math.abs(iTarget-curr)<=Math.abs(iSpeed)){
+                        		isStop=true;
+                        	}
+
+		    			}else{
+		    				   iSpeed=(iTarget-curr)/10;
+		    			       iSpeed=iSpeed>0 ? Math.ceil(iSpeed):Math.floor(iSpeed);/*三木运算符*/
+		    			          if(!iSpeed){
+                        		  isStop=true
+                        	     }
+		    			  }  
+
+                       if(isStop){
+                       	// if(300=oBox.offsetLeft){
+                       	clearInterval(obj.timer)
+                       	if(isLinear){
+                           if(attr=='opacity'){
+          				obj.style[attr]=(curr+iSpeed)/100;
+          			     }else{
+          			   obj.style[attr]=curr+iSpeed+'px';
+          			     }
+
+          			       if(fnEnd){
+                         fnEnd()
+                           }
+
+                       	}
+
+                       }else{
+                       	if(attr=='opacity'){
+                       	obj.style[attr]=(curr+iSpeed)/100;
+                       }else{
+                       		obj.style[attr]=curr+iSpeed+'px';
+                       }
+                   }
+                       console.log(iSpeed)
+		    		},30);
+		          }
+		          window.onload=function(){
+		          	var aDiv=document.getElementsByTagName('div');
+		          	aDiv[0].onmouseover=function(){
+		          		animation(aDiv[0],'height',500,true,function(){
+		          			animation(aDiv[0],'width',500,true,function(){
+		          				animation(aDiv[0],'opacity',20,true)
+		          			})
+		          		})
+		              }
+		       
+		          	 aDiv[0].onmouseout=function(){
+		          		animation(aDiv[0],'height',100,true,function(){
+		          			animation(aDiv[0],'width',100,true,function(){
+		          				animation(aDiv[0],'opacity',100,true)
+		          			})
+		          		})  
+		          	 }	
+		         }
+
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

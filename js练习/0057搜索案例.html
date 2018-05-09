@@ -8,14 +8,25 @@
 			var oBtn=document.getElementById('btn');
 			var oTxt=document.getElementById('txt');
 			var oUl=document.getElementById('ul1');
+
 			var ali=oUl.children;
+
 			oBtn.onclick=function(){
-				var aTxt=oUl.children;
+				var sTxt=oTxt.value.tolowerCase();
+                   var aTxt=sTxt.split('');
 				for (var i = 0; i < ali.length; i++) {
-					ali[i]
+                         ali[i].style.background='';
+                     }
+                 for (var i = 0; i < ali.length; i++) {
+					 var sLi=ali[i]innerHTML.tolowerCase();
+                      for(var j=0;j<aTxt.length;j++){
+                      	if(sLi.search(sTxt) !=-1){
+						ali[i].style.background='yellow';
+                      }
+						
+				   }	
 				}
 			}
-			
 		}
 	</script>
 </head>

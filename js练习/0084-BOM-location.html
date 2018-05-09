@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BOM-location跳转地址</title>
+	<script type="text/javascript">
+		// console.log(window.location);
+		// location.href='https://www.kuazhu.com'
+		// window.location='https://www.kuazhu.com'
+		window.onload=function(){
+			document.getElementById('btn').onclick=function(){
+				// window.location='https://www.kuazhu.com';
+				window.location.assign('https://www.kuazhu.com');
+				// alert(window.location==document.location)
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="跳转页面" id="btn">
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>同时变宽变高变透明</title>
+	<style type="text/css">
+    div{
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin-top: 10px;
+        opacity: 0.3;
+    }
+	</style>
+	<script type="text/javascript">
+		  // var timer=null;
+          function animation(obj,attr,iTarget){
+          	clearInterval(obj.timer);
+          	obj.timer=setInterval(function(){
+          		var iSpeed=0;
+          		var curr=parseFloat(getComputedStyle(obj,false)[attr]);
+          if(attr=='opacity'){
+          			curr=curr*100;
+          		}
+          		if(curr>iTarget){
+          			iSpeed=-10;
+          		}else{
+          			iSpeed=10;
+          		}
+          		if(Math.abs(iTarget-curr)<=Math.abs(iSpeed)){
+          			  clearInterval(obj.timer);
+          			  if(attr=='opacity'){
+          			  	obj.style[attr]=iTarget/100;
+          			  }else{
+          			  	obj.style[attr]=iTarget+'px';
+          			  	}
+                 }else{
+          			if(attr=='opacity'){
+          				obj.style[attr]=(curr+iSpeed)/100;
+          			}else{
+          			   obj.style[attr]=curr+iSpeed+'px';
+          			}		
+          		 }
+          	},30);
+          }
+
+		// var timer=null;
+  //         function animation(obj,attr,iTarget){
+  //         	clearInterval(timer);
+  //         	timer=setInterval(function(){
+  //         		var iSpeed=0;
+  //         		var curr=parseInt(getComputedStyle(obj,false)[attr]);
+  //         		if(curr>iTarget){
+  //         			iSpeed=-10;
+  //         		}else{
+  //         			iSpeed=10;
+  //         		}
+  //         		if(Math.abs(iTarget-curr)<=Math.abs(iSpeed)){
+  //         			  clearInterval(timer);
+  //         			obj.style[attr]=iTarget+'px';
+  //         		}else{
+  //         			obj.style[attr]=curr+iSpeed+'px';
+  //         		}
+  //         	},30);
+  //         }
+
+
+		window.onload=function(){
+			var oDiv1=document.getElementById('div1');
+			var oDiv2=document.getElementById('div2');
+			var oDiv3=document.getElementById('div3');
+			oDiv1.onmouseover=function(){
+                  animation(this,'width',400);
+			}
+			oDiv1.onmouseout=function(){
+				  animation(this,'width',100);
+			}
+			oDiv2.onmouseover=function(){
+                  animation(this,'height',400);
+			}
+			oDiv2.onmouseout=function(){
+				  animation(this,'height',100);
+			}
+			oDiv3.onmouseover=function(){
+                  animation(this,'opacity',400);
+			}
+			oDiv3.onmouseout=function(){
+				  animation(this,'opacity',30);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="div1">变宽</div>
+	<div id="div2">变高</div>
+	<div id="div3">变透明度</div>
+</body>
+</html>

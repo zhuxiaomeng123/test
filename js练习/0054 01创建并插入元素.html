@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>新建元素</title>
+	<title>创建并插入元素</title>
 	<script type="text/javascript">
 		window.onload=function(){
 			var oTxt=document.getElementById('txt')；
@@ -12,7 +12,11 @@
 				var oLi=document.createElement('li');
 				oLi.innerHTML=oTxt.value;
 				// console.log(oLi)
-				oUl.appendChild(oLi);
+
+				// oUl.appendChild(oLi);
+				// oUl.insertBefore(oLi,oUl.firstElementChild);
+				// oUl.insertBefore(oLi,oUl.children[0]);
+				
 			}
 		}
 	</script>
