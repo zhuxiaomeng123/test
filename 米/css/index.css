@@ -1,0 +1,200 @@
+/*
+* @Author: TomChen
+* @Date:   2018-04-08 10:56:50
+* @Last Modified by:   TomChen
+* @Last Modified time: 2018-04-08 16:27:15
+*/
+/*Index common*/
+a{
+	text-decoration: none;
+	font-size: 12px;
+	color: #b0b0b0;
+}
+a:hover{
+	color: #fff;
+}
+/*Top*/
+.top{
+	/*height: 40px;*/
+	background: black;
+	color: #fff;
+}
+.top .nav{
+	/*width: 500px;*/
+	height: 40px;
+	/*background: gold;*/
+	float: left;
+}
+.top .nav li{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+}
+.top .userinfo li span,
+.top .nav li span{
+	margin: 0 0.5em;
+	color: #333;
+}
+.top .cart{
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+	margin-left: 20px;
+	background: #424242;
+	float: right;
+}
+.top .cart a{
+	font-size: 20px;
+}
+.top .cart i{
+	font-size: 20px;
+	vertical-align: top;
+	margin-top: -12px;
+}
+.top .cart span{
+	font-size: 12px;
+}
+.top .cart a:hover{
+	color: #ff6700;
+}
+.top .userinfo{
+	/*width: 160px;*/
+	height: 40px;
+	/*background: pink;*/
+	float: right;
+}
+.top .userinfo li{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+}
+/*Header*/
+.header{
+	height: 100px;
+	/*background: blue;*/
+}
+.header .logo{
+	width: 55px;
+	height: 100px;
+	/*background: red;*/
+	float: left;
+}
+.header .logo a{
+	display: inline-block;
+	width: 55px;
+	height: 55px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-color: #ff6700;
+	margin-top: 22px;
+}
+.header .nav{
+	width: 875px;
+	height: 100px;
+	/*background: tomato;*/
+	float: left;
+	padding-left: 176px;
+	box-sizing: border-box;
+}
+.header .nav li{
+	float: left;
+	margin-right: 20px;
+}
+.header .nav li a{
+	display: inline-block;
+	height: 100px;
+	line-height: 100px;
+	font-size: 16px;
+	color: #333;
+}
+.header .nav li a:hover{
+	color: #ff6700;
+}
+.header .search{
+	width: 296px;
+	height: 100px;
+	line-height: 100px;
+	/*background: pink;*/
+	float: right;
+
+}
+.header .search .inputer{
+	display: inline-block;
+	width: 238px;
+	height: 52px;
+	border: 1px solid #e0e0e0;
+	margin-top: 24px;
+	position: relative;
+}
+.header .search .inputer  input{
+	width: 100%;
+	height: 100%;
+	outline: none;
+	position: absolute;
+	left:0;
+	top:0;
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+.header .search .inputer a{
+	height: 24px;
+	line-height: 24px;
+	padding:0 5px;
+	text-align: center;
+	background: #eee;
+	position: absolute;
+	top:14px;
+	color: #757575;
+}
+.header .search .inputer a:hover{
+	background: #ff6700;
+	color: #fff;
+}
+.header .search .inputer a:nth-of-type(1){
+	left:20px;
+}
+.header .search .inputer a:nth-of-type(2){
+	left:100px;
+}
+.header .search .search-btn{
+	display: inline-block;
+	width: 50px;
+	height: 54px;
+	box-sizing: border-box;
+	border: 1px solid #e0e0e0;
+	border-left: none;
+	line-height: 52px;
+	text-align: center;
+	margin-top: 24px;
+    vertical-align: top;
+    font-size: 20px;
+    font-weight: 400;
+    color: #616161;
+}
+.header .search .search-btn:hover{
+	background: #ff6700;
+	color: #fff;
+}
+/*Hot*/
+.hot{
+	height: 1270px;
+	background: yellow;
+}
+/*Main*/
+.main{
+	height: 2177px;
+	background: pink;
+
+}
+/*footer*/
+.footer{
+	height: 277px;
+	background: gray;
+
+}
+/*end*/
+.end{
+	height: 148px;
+	background: gold;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>练习换肤</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box2{
+			width: 1200px;
+			height: 500px;
+			border: 1px solid #000;
+			margin: 50px auto;
+		}
+		#box{
+			width: 20px;
+			height: 20px;
+		}
+		ul{
+			width: 500px;
+			display: none;
+			height: 50px;
+		}
+		ul li{
+			list-style: none;
+			width: 100px;
+			height: 50px;
+			float: left;
+		}
+		ul li:nth-child(1){
+			background-color: red;
+		}
+		ul li:nth-child(2){
+			background-color:green;
+		}
+		ul li:nth-child(3){
+			background-color: blue;
+		}
+		ul li:nth-child(4){
+			background-color: tomato;
+		}
+		ul li:nth-child(5){
+			background-color: pink;
+			list-style: none;
+		}
+	</style>
+	<script>
+		function change(){
+			var box1=document.getElementById('box1');
+			box1.style.display='block';
+			
+		}
+		function color_red(){
+			var box2=document.getElementById('box2');
+			box2.style.backgroundColor='red';
+		}
+		function color_green(){
+			var box2=document.getElementById('box2');
+			box2.style.backgroundColor='green';
+		}
+		function color_blue(){
+			var box2=document.getElementById('box2');
+			box2.style.backgroundColor='blue';
+		}
+		function color_tomato(){
+			var box2=document.getElementById('box2');
+			box2.style.backgroundColor='tomato';
+		}
+		function color_pink(){
+			var box2=document.getElementById('box2');
+			box2.style.backgroundColor='pink';
+		}
+	</script>
+</head>
+<body>
+	<input type="checkbox" id="box" onclick="change()">换肤
+	<ul id="box1">
+		<li id="c1" onclick="color_red()" ></li>
+		<li id="c2" onclick="color_green()"> </li>
+		<li id="c3" onclick="color_blue()"> </li>
+		<li id="c4" onclick="color_tomato()"></li>
+		<li id="c5" onclick="color_pink()"></li>
+	</ul>
+	<div  class='box2' id="box2"></div>
+</body>
+</html>

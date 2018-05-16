@@ -18,18 +18,14 @@
       	}
       </style>
       <script type="text/javascript">
-      	// var oBox=null;
-       //  var disX=0;
-       //  var disY=0;
         window.onload=function(){
-            new Drag();
+            new Drag({width:200,height:200,background:"red"});
         }
-      	function Drag(){
+      	function Drag(option){
       		this.oBox=document.getElementById('div1');
                   this.disX=0;
                   this.disY=0;
                   var _self=this;
-                  // this.oBox.onmousedown=this.fnDown.bind(this);
                   this.oBox.onmousedown=function(){
                     _self.fnDown();
                   }
@@ -44,7 +40,6 @@
       	   }
 
       	   Drag.prototype.fnMove=function(ev){
-                       // console.log(this)
       	   	     var oEvent=ev||event;
       			 this.oBox.style.left=oEvent.clientX-this.disX+"px";
       			 this.oBox.style.top=oEvent.clientY-this.disY+"px";

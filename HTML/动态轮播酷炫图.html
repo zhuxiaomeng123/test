@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}*
+		body{
+			background: url(img/10.jpg) no-repeat;
+			background-size: cover;
+		}
+		ul{
+			width: 300px;
+			height: 300px;
+			/*background: blue;*/
+			position: absolute;
+			bottom: 100px;
+			left:50%;
+			margin-left: -150px;
+			/*transform:rotateX(-10deg);*/
+			transform-style: preserve-3d;
+		   	animation: sport 6s linear 0s infinite normal;}
+		   	@keyframes sport {
+                   from{transform: rotateX(-10deg) rotateY(0deg);
+                   }
+                   to{transform:rotateX(-10deg) rotateY(360deg);}
+        
+
+		}
+		ul:hover{
+        	animation-play-state: paused;
+        }
+        ul:hover li img{
+        	opacity: 0.5;
+        	 }
+        ul li:hover img{
+        	opacity: 1}
+		ul li{
+		   	list-style:none;
+		   	width:300px;
+		   	height:300px;
+		   	position:absolute;
+		   	left:0;
+		   	top:0;
+		   	background:black
+
+		   }
+		   
+         
+		ul li:nth-child(1){
+		   	background:yellow;
+		   transform:rotateY(45deg) translateZ(400px);}
+		ul li:nth-child(2){
+		   	background:pink;
+		   	transform:rotateY(90deg) translateZ(400px);}
+		ul li:nth-child(3){
+		   	background:tomato;
+		   	transform:rotateY(135deg) translateZ(400px);}
+		ul li:nth-child(4){
+		   	background:red;
+		   	transform:rotateY(180deg) translateZ(400px);}
+		ul li:nth-child(5){
+		   	background:blue;
+		   	transform:rotateY(225deg) translateZ(400px);}
+		ul li:nth-child(6){
+		   	background:purple;
+		   	transform:rotateY(270deg) translateZ(400px);}
+		ul li:nth-child(7){
+		   	background:purple;
+		   	transform:rotateY(315deg) translateZ(400px);}
+		ul li:nth-child(8){
+		   	background:purple;
+		   	transform:rotateY(360deg) translateZ(400px);}
+		
+        ul li img{
+		   	width:300px;
+		   	height:300px;
+		   	border:5px solid white;
+		   	box-sizing:border-box;
+		   }
+		   .heart{
+		   	width:170px;
+		   	height:160px;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 100px;
+            left:100px;
+            animation: jump 6s linear 0s infinite normal;
+		   }
+		   @keyframes jump{
+            0%{
+            	left:100px;
+            	bottom:100px;
+            	opacity: 1 
+            }
+            20%{
+            	left:500px;
+            	bottom:300px;
+            	opacity: 0; 
+            }
+            40%{
+            	left:800px;
+            	bottom:600px;
+            	opacity: 1; 
+            }
+            60%{
+            	left:1000px;
+            	bottom:400px;
+            	opacity: 1 ;
+            }
+            80%{
+            	left:1400px;
+            	bottom:400px;
+            	opacity: 0; 
+            }
+            100%{
+            	left:1200px;
+            	bottom:100px;
+            	opacity: 1 ;
+            }
+
+		   }
+		   div{ 
+		   	top:10px; left: 0px;
+		   	animation: jump 6s linear 0s infinite normal;}
+
+	</style>
+</head>
+<body>
+	<marquee direction=right><P><h2>我们会记得!</h2></P></marquee>
+	<marquee direction=left><P><h2>亲爱的，我想你了！</h2></P></marquee>
+	<marquee left="50%" width="112" height="112"><P><h2>因为刚好遇见你，留下足迹才美丽!</h2></P></marquee>
+	<ul>
+		<li><img src="img/1.jpg" alt=""></li>
+		<li><img src="img/2.jpg" alt=""></li>
+		<li><img src="img/3.jpg" alt=""></li>
+		<li><img src="img/4.jpg" alt=""></li>
+		<li><img src="img/5.jpg" alt=""></li>
+		<li><img src="img/6.jpg" alt=""></li>
+		<li><img src="img/7.jpg" alt=""></li>
+		<li><img src="img/8.jpg" alt=""></li>
+	</ul>
+	<img src="img/11.jpg" alt="" class="heart">	
+	<EMBED src="img/追光者.mp3" autostart="true" loop="true" width="80" height="80">
+	</body>
+</html>
