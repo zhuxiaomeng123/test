@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>041jQuery自定义动画.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').click(function(){
+                 // $('div').animate({
+                 //       width:200,
+                 //       height:200
+                 // },1000)
+                 /*
+                 $('div').animate({
+                       width:"+=200",
+                       height:"+=200"
+                 },1000)  
+                 */  
+                  $('div').animate({
+                       width:"-=20",
+                       height:"-=20"
+                 },1000)                            
+			})
+
+		})
+	</script>
+</head>
+<body>
+	   <button>开始通话</button>
+	   <div></div>
+</body>
+</html>

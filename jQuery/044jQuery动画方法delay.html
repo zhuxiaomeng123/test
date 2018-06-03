@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>044jQuery动画方法delay.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').eq(0).click(function(){
+
+                  $('div').animate({
+                 	  width:400
+                 },2000).delay(1000);
+                 	$('div').animate({
+                      height:400  
+                 	},2000);
+                    $('div').animate({
+                      opacity:0.5
+                   },2000);                                                   
+			});
+		})
+	</script>
+</head>
+<body>
+	   <button>开始动画</button>
+	   <button>停止动画</button>
+	   <div></div>
+</body>
+</html>

@@ -4,10 +4,9 @@
 	<meta charset="UTF-8">
 	<title>锤子Pro2</title>
 	<link rel="stylesheet" type="text/css" href="css/index(锤子）.css">
-	
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
-
+    <link rel="stylesheet" type="text/css" href="css/common（锤子）.css">
 	 <link rel="stylesheet" type="text/css" href="css/fontawesome-all.css">
 </head>
 <body>
@@ -15,16 +14,27 @@
 	<div class="top">
 		<div class="container">
 			   <div class="nav">
-			   	<div class="cart">
-				<a href="#">
-					<span class="cart-box">|<span></span></span>
-					<i class="fas fa-user"></i>
-				</a>
-				 <a href="#">
-					<i class="iconfont">&#xe60c;</i>
-					<span class="cart-box1"><a href="#">0</a></span>
-				 </a>
-			    </div>
+
+               <!-- cart-box的js -->
+             <div class="cart-box">
+			<!-- 手推车 -->
+					<div class="cart">
+						<!-- 假链接 -->
+						<a href="#">
+							<!-- 图标 -->
+							<i class="iconfont">&#xe60c;</i>
+							<!-- 购物车盒子 -->
+							<span class="cart-box">购物车(<span>0</span></span>
+						</a>
+					</div>
+					<div class="cart-content">
+						<div class="loader"></div>
+						<div class="empty-cart">购物车中还没有商品，赶紧选购吧！</div>
+					</div>
+            </div>
+
+
+
 			   	    <div class="logo"><a href="#"><img src="images/logot.jpg"></a></div>
 			   	      <ul>
 			   	      	   <li><a href="#">在线商城</a><span></span></li>	
@@ -167,4 +177,6 @@
 
 	<!-- end end -->
 </body>
+<script src="js/xiao锤子.js"></script>
+<script src="js/xiao锤子tool.js"></script>
 </html>

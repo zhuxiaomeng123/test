@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>001jQuery体验</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+         div{
+         	width: 100px;
+         	height: 100px;
+         	border: 1px solid #000;
+         	margin-top: 20px;
+         }
+	</style>
+<!-- 	<script type="text/javascript">
+		window.onload=function(){
+             var oBtn=document.getElementsByTagName('button')[0];
+             oBtn.onclick=function(){
+             	// alert('aa');
+             	var aDiv=document.getElementsByTagName('div');
+             	for(var i=0;i<aDiv.length;i++){
+             		aDiv[i].style.background='red';
+             		aDiv[i].style.width='200px';
+             	}
+             }
+		}
+	</script> -->
+	<script src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').click(function(){
+				$('div').css({
+					background:'red',
+					width:'200px'
+				})
+			})
+		})
+	</script>
+</head>
+<body>
+	<button>点我</button>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>观察者模式</title>
+	<script type="text/javascript">
+		(function(w){
+			function Teacher(name){
+				this.name=name;
+                this.students=[]; 
+			}
+			Teacher.prototype={
+				constructor:Teacher,
+				__proto__:Object.prototype,
+				register:function(student){
+					this.students.push(student);
+				},
+				publish:function(msg){
+					for (var i = 0; i < this.students.length; i++) {
+						this.students[i].listen(msg)
+					}
+				}
+			}
+			w.Teacher=Teacher;
+		})(window);
+
+		(function(w){
+			function Student(name,teacher){
+				this.name=name;
+				teacher.register(this);
+				this.msg='';
+			}
+				Student.prototype={
+				constructor:Student,
+				__proto__:Object.prototype,
+				listen:function(msg){
+					this.msg=msg;
+				}
+			}
+			 w.Student=Student;
+		})(window);
+		var teacher=new Teacher('Tom');
+		var s1=new Student('Eugene',teacher);
+		var s2=new Student('Amy',teacher);
+		var s3=new Student('x',teacher);
+
+		teacher.publish('完成小米首页');
+
+		console.log(s1.name + "get"+ s1.msg);
+		console.log(s2.name + "get"+ s2.msg);
+		console.log(s3.name + "get"+ s3.msg);
+
+
+
+
+		var teacher2=new Teacher('Leo');
+		var s4=new Student('Eugene1',teacher);
+		var s5=new Student('Amy2',teacher);
+		var s6=new Student('xxx',teacher);
+         teacher.publish('完成锤子科技');
+        console.log(s4.name + "get"+ s4.msg);
+		console.log(s5.name + "get"+ s5.msg);
+		console.log(s6.name + "get"+ s6.msg);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -31,27 +31,68 @@ a{
 	line-height: 18px;
    
 }
-.top .container .cart{
+
+
+
+
+.top .cart-box{
+      position: absolute;
+      right: 0;
+}
+.top .cart{
 	width: 120px;
 	height: 40px;
+	top:40px;
+	right: 66px;
 	line-height: 40px;
 	padding-left: 20px;
 	margin-left: 20px;
+	background: #424242;
 	float: right;
-	padding-top: 50px;
-	padding-right: 150px;
+	position: relative;
+	z-index: 1002;
+}
+.top .cart a{
 	font-size: 20px;
+}
+.top .cart i{
+	font-size: 20px;
+	vertical-align: top;
+	margin-top: -12px;
+}
+.top .cart span{
+	font-size: 12px;
+}
 
-    
+.top .cart-box .cart-content{
+	width: 300px;
+	height: 0px;
+	background: #fff;
+	position: absolute;
+	top:40px;
+	right: 0;
+	z-index: 1001;
+	box-shadow: 0px 2px 10px rgba(0,0,0,0.25);
+	overflow: hidden;
 }
-.top .container .cart a{
-	text-decoration: none;
-	color: #96626d;
+.top .cart-box .cart-content .loader{
+	margin-top: 40px;
+	display: none;
 }
-.top .container .cart i{
-	font-size: 25px;
-	margin-left: 10px;
+.top .cart-box .empty-cart{
+	display: none;
+	margin-top: 40px;
+	font-size: 14px;
+	font-weight: 400px;
+	color: #000;
+	margin-left: 20px;
 }
+
+
+
+
+
+
 
 
 

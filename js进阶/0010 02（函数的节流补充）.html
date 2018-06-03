@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的节流（补充）</title>
+
+	<style type="text/css">
+		body{
+			height: 3000px;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+<!-- <script type="text/javascript">
+	var timer=null;
+	window.onresize=function(){
+		clearTimeout(timer);
+		timer=setTimeout(function(){
+		console.log(window.innerWidth);
+		},500)
+	}
+	//当屏幕发生变化时，执行（）;
+	//做一个函数来实现节流
+
+          function throttle(){
+          	return function(){
+          		console.log('aa');
+          	}
+          }
+</script> -->
+    <script type="text/javascript">
+		          function throttle(fn,delay){
+		          	var timer=null;
+	          	return function(){
+	          		clearTimeout(timer);
+	          		timer=setTimeout(fn,delay);
+
+	          	}
+	          }
+	          //让函数返回一个函数
+	          //目的都是使函数产生节流
+	          window.onresize=throttle(function(){
+	          	console.log('aa');
+	          },200);
+	</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>语法错误测试</title>
+</head>
+<body>
+<!-- 	<script type="text/javascript">
+		var a=1;
+		// console.log(a);
+		a();//类型错误（应该是函数）       
+	</script> -->
+	<script type="text/javascript">
+		//爆栈错误，系统不停地调用函数，以至于爆栈
+		// function fact(){
+
+		// 	}
+		// 	fact();
+		// }
+		//   fact();
+
+
+         //爆栈的解决/  递归能解决，能完成的
+		function fact(n){
+		  			if(n==1){
+				return 1;
+			}else{
+				
+			 return	n*fact(n-1);
+			}
+		}
+		  fact(5);
+
+
+	</script>
+</body>
+</html>

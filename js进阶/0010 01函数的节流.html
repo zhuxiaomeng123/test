@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数的节流01（拉动屏幕结束后才打印）</title>
+	<style type="text/css">
+		body{
+			height: 3000px;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+
+      function throttle(fn,delay){
+      	 var timer=null;
+          return function(){
+          	clearTimeout(timer);
+          	timer=setTimeout(fn,delay);
+          }
+      }
+      window.onresize=throttle(function(){
+      	console.log('aa');
+      },500)
+      // window.onresize=throttle(function(){
+      // 	console.log('bb');
+      // },500)
+
+</script>
+</html>

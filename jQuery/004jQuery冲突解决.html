@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery冲突解决</title>
+	<script type="text/javascript">
+		(function(w){
+              function test(){
+              	alert("my test")
+              }
+              w.$=test;
+		})(window);
+	</script>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		  // jQuery.noConflict();
+	     var xm= jQuery.noConflict();
+         $();
+         /*
+	    jQuery(function(){
+	        alert("abc");
+	    });
+         */
+	    xm(function(){
+	        alert("abc");
+	    });    
+	    // console.log(xm=jQuery);
+	      console.log(jQuery==$); 
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

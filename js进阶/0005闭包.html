@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包</title>
+<!-- 	<script type="text/javascript">
+		//闭包
+		var name='Tom';
+		function show(){
+			var name='Eugene';
+			console.log(name);
+		}
+		show();
+	</script> -->
+
+<!-- 	<script type="text/javascript">
+		var name='Tom';
+		function show(){
+			var name1='Eugene';
+			console.log(name);
+		}
+		show();
+		console.log(name1);
+	</script> -->
+<!-- 	<script type="text/javascript">
+		var name='Tom';
+		function show(){
+			var name1='Eugene';
+			console.log(name);
+			return function(){
+                  return name1;
+			}
+		}
+		show();
+		console.log(name1);
+	</script> -->
+<!-- 	<script type="text/javascript">
+		var name='Tom';
+		function show(){
+			var name1='Eugene';
+
+           function fn(){
+           	var name2='Eugene1';
+           	   console.log(name1);
+           	   console.log(name2);
+           	   console.log(name);
+           }
+            fn();
+
+		}
+		show();
+	</script>	 -->
+		<script type="text/javascript">
+
+		  var name='Tom';
+		function show(){
+			var name1='Eugene';
+             /*
+           function fn(){
+           	var name2='Eugene1';
+           	   console.log(name1);
+           	   console.log(name2);
+           	   console.log(name);
+           }
+            fn();
+              */
+              return function(){
+              	  return name1;
+              }
+		}
+		// show();
+		console.log(show());
+	  </script>	
+</head>
+<body>
+	
+</body>
+</html>
