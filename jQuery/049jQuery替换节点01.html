@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery替换节点</title>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+             $('button').click(function(){
+             	var $h1=$('<h1>我是标题</h1>');
+             	  // $('div').replaceWith($h1);
+             	  $h1.replaceAll('.div2')
+             })
+		});
+	</script>
+</head>
+<body>
+	<button>替换</button>
+	<div class="div2">我是Div1</div>
+	<div>我是Div2</div>
+	<div>我是Div3</div>
+	<div>我是Div4</div>
+</body>
+</html>
